@@ -218,7 +218,6 @@ module.exports = grammar({
     _simple_statement: ($) =>
       choice(
         $._annotations,
-        $.tool_statement,
         $.signal_statement,
         $.class_name_statement,
         $.extends_statement,
@@ -358,7 +357,6 @@ module.exports = grammar({
     break_statement: ($) => prec.left("break"),
     breakpoint_statement: ($) => "breakpoint",
     continue_statement: ($) => prec.left("continue"),
-    tool_statement: ($) => "tool",
 
     signal_statement: ($) =>
       seq(
