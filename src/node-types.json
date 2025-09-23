@@ -106,10 +106,6 @@
         "named": true
       },
       {
-        "type": "region",
-        "named": true
-      },
-      {
         "type": "while_statement",
         "named": true
       }
@@ -161,6 +157,10 @@
     "subtypes": [
       {
         "type": "_primary_expression",
+        "named": true
+      },
+      {
+        "type": "conditional_expression",
         "named": true
       },
       {
@@ -768,15 +768,19 @@
           "named": true
         },
         {
+          "type": "region_end",
+          "named": true
+        },
+        {
+          "type": "region_start",
+          "named": true
+        },
+        {
           "type": "return_statement",
           "named": true
         },
         {
           "type": "signal_statement",
-          "named": true
-        },
-        {
-          "type": "tool_statement",
           "named": true
         },
         {
@@ -818,6 +822,49 @@
     }
   },
   {
+    "type": "class_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "class_definition",
+          "named": true
+        },
+        {
+          "type": "const_statement",
+          "named": true
+        },
+        {
+          "type": "enum_definition",
+          "named": true
+        },
+        {
+          "type": "extends_statement",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "pass_statement",
+          "named": true
+        },
+        {
+          "type": "signal_statement",
+          "named": true
+        },
+        {
+          "type": "variable_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "class_definition",
     "named": true,
     "fields": {
@@ -826,7 +873,7 @@
         "required": true,
         "types": [
           {
-            "type": "body",
+            "type": "class_body",
             "named": true
           }
         ]
@@ -1567,6 +1614,10 @@
       "required": true,
       "types": [
         {
+          "type": "annotation",
+          "named": true
+        },
+        {
           "type": "pattern_section",
           "named": true
         }
@@ -1835,79 +1886,15 @@
     }
   },
   {
-    "type": "region",
+    "type": "region_start",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "types": [
         {
-          "type": "_compound_statement",
-          "named": true
-        },
-        {
-          "type": "annotation",
-          "named": true
-        },
-        {
-          "type": "break_statement",
-          "named": true
-        },
-        {
-          "type": "breakpoint_statement",
-          "named": true
-        },
-        {
-          "type": "class_name_statement",
-          "named": true
-        },
-        {
-          "type": "const_statement",
-          "named": true
-        },
-        {
-          "type": "continue_statement",
-          "named": true
-        },
-        {
-          "type": "export_variable_statement",
-          "named": true
-        },
-        {
-          "type": "expression_statement",
-          "named": true
-        },
-        {
-          "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "onready_variable_statement",
-          "named": true
-        },
-        {
-          "type": "pass_statement",
-          "named": true
-        },
-        {
           "type": "region_label",
-          "named": true
-        },
-        {
-          "type": "return_statement",
-          "named": true
-        },
-        {
-          "type": "signal_statement",
-          "named": true
-        },
-        {
-          "type": "tool_statement",
-          "named": true
-        },
-        {
-          "type": "variable_statement",
           "named": true
         }
       ]
@@ -2100,15 +2087,19 @@
           "named": true
         },
         {
+          "type": "region_end",
+          "named": true
+        },
+        {
+          "type": "region_start",
+          "named": true
+        },
+        {
           "type": "return_statement",
           "named": true
         },
         {
           "type": "signal_statement",
-          "named": true
-        },
-        {
-          "type": "tool_statement",
           "named": true
         },
         {
@@ -2224,6 +2215,10 @@
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "inferred_type",
+            "named": true
+          },
           {
             "type": "type",
             "named": true
@@ -2429,6 +2424,10 @@
     "named": false
   },
   {
+    "type": "#region",
+    "named": false
+  },
+  {
     "type": "$",
     "named": false
   },
@@ -2626,8 +2625,7 @@
   },
   {
     "type": "comment",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
     "type": "const",
@@ -2699,8 +2697,7 @@
   },
   {
     "type": "line_continuation",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
     "type": "master",
@@ -2747,6 +2744,10 @@
     "named": false
   },
   {
+    "type": "region_end",
+    "named": true
+  },
+  {
     "type": "region_label",
     "named": true
   },
@@ -2776,10 +2777,6 @@
   },
   {
     "type": "static_keyword",
-    "named": true
-  },
-  {
-    "type": "tool_statement",
     "named": true
   },
   {

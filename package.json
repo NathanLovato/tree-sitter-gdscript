@@ -9,6 +9,7 @@
   "license": "MIT",
   "author": "Preston Knopp",
   "main": "bindings/node",
+  "types": "bindings/node",
   "keywords": [
     "incremental",
     "parsing",
@@ -54,6 +55,13 @@
     "genTest": "tree-sitter generate && npm test",
     "parse": "tree-sitter parse",
     "ts": "tree-sitter",
-    "format": "prettier -w grammar.js package.json"
-  }
+    "format": "prettier -w grammar.js package.json",
+    "prebuildify": "prebuildify --napi --strip"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.gdscript",
+      "injection-regex": "^gdscript$"
+    }
+  ]
 }
